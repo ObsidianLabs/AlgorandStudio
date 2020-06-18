@@ -23,7 +23,7 @@ Installation packages are provided in [releases](https://github.com/ObsidianLabs
 When Algorand Studio is properly installed and started for the first time, it will display a welcome page to help you install the dependencies for ASC1 development - Docker, Algorand node, and PyTeal.
 
 <p align="center">
-  <img src="./screenshots/welcome.png" width="600px">
+  <img src="./screenshots/welcome.png" width="720px">
 </p>
 
 - Algorand Studio will use [**Docker**](https://www.docker.com/) to run Algorand node and the compiler. If you don't have Docker installed before, click the `Install Docker` button to open the Docker official website for download and installation.
@@ -37,7 +37,7 @@ After all dependencies are installed, the gray `Skip` button will change to `Get
 The main interface will show a list of Algorand projects. If you open Algorand Studio for the first time, this list will be empty. Click the `New` button to create a new project. You can select from a list of templates to generate initial files. Created projects will be placed in the workspace folder `$HOME/Algorand Studio`.
 
 <p align="center">
-  <img src="./screenshots/new_project.png" width="600px">
+  <img src="./screenshots/new_project.png" width="720px">
 </p>
 
 After a project is created, Algorand Studio will automatically navigate to the project editor.
@@ -47,7 +47,7 @@ After a project is created, Algorand Studio will automatically navigate to the p
 Click the `Build` button (with the hammer icon) in the project toolbar (above the file tree) to compile the Algorand smart contract. If this is a pure TEAL project, it only requires the Algorand node docker image to compile TEAL scripts to binaries. If this is a PyTeal project, it also requires the PyTeal docker image to compile PyTeal to TEAL in advance.
 
 <p align="center">
-  <img src="./screenshots/main.png" width="600px">
+  <img src="./screenshots/main.png" width="720px">
 </p>
 
 The terminal below will display logs and errors from the compiler. If the smart contract is compiled successfully, the terminal will print the [contract address](https://developer.algorand.org/docs/features/asc1/goal_teal_walkthrough/#simple-teal-example) and save it to the file `./contract.addr` for later use.
@@ -59,13 +59,13 @@ Click the `Network` tab in the header and switch to the Algorand network manager
 When you use Algorand Studio to run an Algorand node for the first time, you need to create a node instance. Click the `New Instance` button in the upper right corner and enter a name to create a new node instance. Algorand Studio will download the latest snapshot for the using network so network data will be up-to-date.
 
 <p align="center">
-  <img src="./screenshots/download_snapshot.png" width="600px">
+  <img src="./screenshots/download_snapshot.png" width="720px">
 </p>
 
 Once the node instance is created, you can click the `Start` button to start the Algorand node. Algorand Studio will automatically detect the network token (printed in the log terminal) so other components of Algorand Studio can connect to the network. Therefore, you will be able to query network data and push transactions to it. The real-time logs for the running node will also be displayed in the terminal.
 
 <p align="center">
-  <img src="./screenshots/algorand_node.png" width="600px">
+  <img src="./screenshots/algorand_node.png" width="720px">
 </p>
 
 ### Keypair Manager
@@ -73,7 +73,7 @@ Once the node instance is created, you can click the `Start` button to start the
 On any interface of Algorand Studio, you can click the green key button on the left of the bottom bar to open the Algorand keypair manager.
 
 <p align="center">
-  <img src="./screenshots/keypairs.png" width="360px">
+  <img src="./screenshots/keypairs.png" width="480px">
 </p>
 
 In the keypair manager, you can create, import and manager Algorand keypairs. The manager will export a signature provider for other components of Algorand Studio to sign transactions, including regular signing, multi-sig signing and signing for a LogicSig. You can also give each keypair a name so that you can easily specify the sender, recipient and signers when using a [template](#transaction-template) to construct a transaction.
@@ -128,7 +128,7 @@ The `type` for an individual transaction can be `pay`, `asset-create`, `asset-op
 To send a test transaction, click the third button (with the test tube icon) in the toolbar to open the *Test Transaction* modal. You will be able to select from a list of transactions defined in the `./tests` folder. This feature can also be used to test smart contract executions. For example, templates `tests/7.contract.json` and `tests/8.contract_delegated.json` have defined two transactions that execute the compiled smart contract, one as a [contract address](https://developer.algorand.org/docs/features/asc1/modes/#contract-account) and another as [delegated approval](https://developer.algorand.org/docs/features/asc1/modes/#delegated-approval).
 
 <p align="center">
-  <img src="./screenshots/test_transaction.png" width="600px">
+  <img src="./screenshots/test_transaction.png" width="720px">
 </p>
 
 ### Algorand Explorer
@@ -136,7 +136,7 @@ To send a test transaction, click the third button (with the test tube icon) in 
 Algorand Studio also comes with a simple block explorer so that you can lookup basic account information, such as ALGO balance, ASA balance and transaction history. For more advanced usage, please go to [AlgoExplorer](https://testnet.algoexplorer.io/) or [GoalSeeker](https://goalseeker.purestake.io/algorand/testnet).
 
 <p align="center">
-  <img src="./screenshots/explorer.png" width="600px">
+  <img src="./screenshots/explorer.png" width="720px">
 </p>
 
 To the right of the address bar, there are also some buttons for convenient tools. We currently provide a faucet tool for claiming free TestNet tokens, and a transfer tool for constructing ALGO transfer and ASA transfer transactions.
