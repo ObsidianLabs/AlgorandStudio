@@ -82,7 +82,7 @@ In the keypair manager, you can create, import and manager Algorand keypairs. Th
 
 In order to facilitate the construction of various Algorand transactions, we propose a protocol to construct transactions based on JSON templates. A sample transaction template is shown below
 
-``` json
+``` js
 {
   "name": "Sample Transaction",
   "accounts": [
