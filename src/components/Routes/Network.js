@@ -1,18 +1,17 @@
 import React, { PureComponent } from 'react'
 
+import redux, { connect } from '@obsidians/redux'
 import { InstanceList } from '@obsidians/instances'
 
 import { withRouter } from 'react-router-dom'
 
-import { connect, dispatch } from '@/redux'
-
 const onLifecycle = ({ lifecycle, runningInstance, algoNode }) => {
   switch (lifecycle) {
     case 'stopped':
-      dispatch('UPDATE_UI_STATE', { localNetwork: '', algoNode: '' })
+      redux.dispatch('UPDATE_UI_STATE', { localNetwork: '', algoNode: '' })
       break
     case 'started':
-      dispatch('UPDATE_UI_STATE', { localNetwork: runningInstance, algoNode })
+      redux.dispatch('UPDATE_UI_STATE', { localNetwork: runningInstance, algoNode })
       break
     default:
   }

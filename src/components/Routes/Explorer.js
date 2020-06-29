@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 
 import { Screen, Button } from '@obsidians/ui-components'
+import redux, { connect } from '@obsidians/redux'
 import Explorer from '@obsidians/explorer'
 
 import { withRouter } from 'react-router-dom'
-
-import { connect, dispatch } from '@/redux'
-
 
 class ExplorerWithProps extends Component {
   constructor (props) {
@@ -60,7 +58,7 @@ class ExplorerWithProps extends Component {
   }
 
   onValueChanged = value => {
-    dispatch('SELECT_ACCOUNT', {
+    redux.dispatch('SELECT_ACCOUNT', {
       network: this.props.network,
       account: value
     })
@@ -68,14 +66,14 @@ class ExplorerWithProps extends Component {
   }
 
   onChangeStarred = starred => {
-    dispatch('SET_STARRED', {
+    redux.dispatch('SET_STARRED', {
       network: this.props.network,
       starred
     })
   }
 
   onTabsUpdated = tabs => {
-    dispatch('SET_ACCOUNT_TABS', {
+    redux.dispatch('SET_ACCOUNT_TABS', {
       network: this.props.network,
       tabs
     })

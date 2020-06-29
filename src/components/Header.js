@@ -1,25 +1,14 @@
 import React, { PureComponent } from 'react'
 
-import { connect, store, dispatch } from '@/redux'
-
+import { connect } from '@obsidians/redux'
 import headerActions, { networks, Header, NavGuard } from '@obsidians/header'
-import keypairManager from '@obsidians/keypair'
 import { actions } from '@obsidians/project'
-
 
 class HeaderWithRedux extends PureComponent {
   componentDidMount () {
-    const redux = {
-      getState: () => store.getState(),
-      dispatch,
-    }
-    window.redux = redux
-    keypairManager.redux = redux
     actions.history = this.props.history
-    actions.redux = redux
     headerActions.history = this.props.history
-    headerActions.redux = redux
-    this.navGuard = new NavGuard(this.props.history, redux)
+    this.navGuard = new NavGuard(this.props.history)
   }
 
   networkList = networksByGroup => {

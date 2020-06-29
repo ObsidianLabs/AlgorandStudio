@@ -9,9 +9,8 @@ import {
 
 import Immutable from 'immutable'
 
+import { connect } from '@obsidians/redux'
 import { ProjectList, actions } from '@obsidians/project'
-
-import { connect } from '@/redux'
 
 class UserHomepage extends PureComponent {
   static propTypes = {

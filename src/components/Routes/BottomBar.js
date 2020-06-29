@@ -1,8 +1,7 @@
 import React from 'react'
 
+import redux, { connect } from '@obsidians/redux'
 import BottomBar from '@obsidians/bottombar'
-
-import { connect, dispatch } from '@/redux'
 
 function BottomBarWithProps (props) {
   const selected = props.projects.get('selected')
@@ -13,8 +12,8 @@ function BottomBarWithProps (props) {
       projectValid={projectValid}
       nodeVersion={props.globalConfig.get('nodeVersion')}
       compilerVersion={props.globalConfig.get('compilerVersion')}
-      onSelectNodeVersion={nodeVersion => dispatch('UPDATE_GLOBAL_CONFIG', { nodeVersion })}
-      onSelectCompiler={compilerVersion => dispatch('UPDATE_GLOBAL_CONFIG', { compilerVersion })}
+      onSelectNodeVersion={nodeVersion => redux.dispatch('UPDATE_GLOBAL_CONFIG', { nodeVersion })}
+      onSelectCompiler={compilerVersion => redux.dispatch('UPDATE_GLOBAL_CONFIG', { compilerVersion })}
     />
   )
 }
