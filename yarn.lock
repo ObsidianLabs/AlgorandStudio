@@ -1398,30 +1398,21 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@obsidians/algorand-account@^0.1.0":
-  version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-account/-/algorand-account-0.1.0.tgz#4b79d339897a25ac8f44490d58aca84d3d423c96"
-  integrity sha512-HSnbxf9WQOJo7tpoPWNrx/UHY18X6vkzkkE1peWxsTtCbJdRMB3VJ5TiM+5CMBouAYNYN1g/em3j7ggrTT64ig==
-  dependencies:
-    "@obsidians/algorand-keypair" "^0.1.0"
-    "@obsidians/algorand-sdk" "^0.1.0"
-    "@obsidians/ui-components" "^0.1.0"
-
 "@obsidians/algorand-bottombar@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-bottombar/-/algorand-bottombar-0.1.0.tgz#92a1a04a57d0897d1c5dbde4dabdbd021c9e7c76"
-  integrity sha512-9H3SZPdCETT1ramuJNfxTOTo6woaHEmhMFhrtSl4RPz7y7tsbyEboyO9kWUtV1m9jNVdc3Pdm8y70ettg3VQ7w==
+  resolved "http://localhost:4873/@obsidians%2falgorand-bottombar/-/algorand-bottombar-0.1.0.tgz#358fef72d1eb8860845bde0b51784c3a259c4ecf"
+  integrity sha512-75dgvbauqKtEjhu0/ubmh9bSTHSdU9CNTnxwDKyy3ahWju/0WZcfCmOEkgxBkcmSEObspQJULnmDCKxlr4+TRQ==
   dependencies:
     "@obsidians/algorand-compiler" "^0.1.0"
     "@obsidians/algorand-instances" "^0.1.0"
-    "@obsidians/algorand-keypair" "^0.1.0"
     "@obsidians/algorand-project" "^0.1.0"
+    "@obsidians/keypair" "^0.1.0"
     react-router-cache-route "^1.8.4"
 
 "@obsidians/algorand-compiler@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-compiler/-/algorand-compiler-0.1.0.tgz#af5bf858e6355b56e4ee14cf8c9ea0d5046d0547"
-  integrity sha512-JJlxo30/ULIxiSrG6Qo0ZkCzTTHGBcUygLnSy/k6rJ2L7YvA5DA4grrSAeAVm3A7Q7wm4C2CNafzaYsEKfnglA==
+  resolved "http://localhost:4873/@obsidians%2falgorand-compiler/-/algorand-compiler-0.1.0.tgz#ffdfeedb8cffa34c00106f64370ab1fb03116b80"
+  integrity sha512-nKdLdEfUJoofFwipwLQU9JGkjSMRFL7UumpwNZ2GXh3fztf+IvyIs/KUWt9+AsMplftFtdUu1uH0rUPT4OspKw==
   dependencies:
     "@obsidians/file-ops" "^0.1.0"
     "@obsidians/ipc" "^0.1.1"
@@ -1430,10 +1421,18 @@
     "@obsidians/ui-components" "^0.1.0"
     algosdk "^1.6.1"
 
+"@obsidians/algorand-explorer@^0.1.0":
+  version "0.1.0"
+  resolved "http://localhost:4873/@obsidians%2falgorand-explorer/-/algorand-explorer-0.1.0.tgz#3032804e5bd21bc5f73dfd56e7ea504ab466c986"
+  integrity sha512-ZYf517tUyApt1whj40OrD5XDxuluQ7Ni/LrSq5yOUWjXEpR+85GzfIKZkS90suK0MQVuSeMs4iU3MZD5t4yKjA==
+  dependencies:
+    "@obsidians/algorand-sdk" "^0.1.0"
+    "@obsidians/ui-components" "^0.1.0"
+
 "@obsidians/algorand-header@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-header/-/algorand-header-0.1.0.tgz#acf939c5f09f5899229f2845b1f5c7769e8f5412"
-  integrity sha512-YmI/VfHILWXoYc/ZtQDm/wX09xYr25XN7kMJzRQ6N9+7esrhH29LMqnFBeX/U03HqWk+bEEwIBJnMOTJRbQptw==
+  resolved "http://localhost:4873/@obsidians%2falgorand-header/-/algorand-header-0.1.0.tgz#ce20ee6909d59ced6f78df4de875e8941294e5cd"
+  integrity sha512-F5iHn7He+tkVXcRf02NcwPURGdHB+ouk5U/f+mw8ooDUZ/6nEI5bAmVlEiYQuPA3/UeeYmHsRvBsJi6KEWGpLA==
   dependencies:
     "@obsidians/algorand-project" "^0.1.0"
     "@obsidians/navbar" "^0.1.0"
@@ -1441,12 +1440,12 @@
 
 "@obsidians/algorand-instances@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-instances/-/algorand-instances-0.1.0.tgz#8dd1e32fef0835c068b4b5247a380e3d46c98bf3"
-  integrity sha512-f2Qy03SCjlurZbhVSt/TO+Oz1BGzUtuGQjHa/htJmWzHFiJ57+n8t32tbrdgjh3nt9/1LamBAOTDJdwrW4XGGw==
+  resolved "http://localhost:4873/@obsidians%2falgorand-instances/-/algorand-instances-0.1.0.tgz#090702008cef128571220664011f50de3de61662"
+  integrity sha512-rPtmsayuSdxb7fGBga+x7W62zmMVzCy8SV9XvrBr1UPC6Rz6yzzs7tKdrjJwDu9ubkEjPfl0XS3rq1BPRIxlfQ==
   dependencies:
-    "@obsidians/algorand-keypair" "^0.1.0"
     "@obsidians/algorand-node" "^0.1.0"
     "@obsidians/ipc" "^0.1.1"
+    "@obsidians/keypair" "^0.1.0"
     "@obsidians/notification" "^0.1.0"
     "@obsidians/terminal" "^0.1.1"
     "@obsidians/ui-components" "^0.1.0"
@@ -1455,8 +1454,8 @@
 
 "@obsidians/algorand-keypair@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-keypair/-/algorand-keypair-0.1.0.tgz#6f9b2bc8ef3a8c5a3220a4c9ac6f0ce5bc6c4083"
-  integrity sha512-yT/ypPBJisYrMCorklIA6lIg/+7hh0HFsjqlcL6uUNQd2hP1mxAWte90Kyo/zLr/ej1T4ySksworQWe2pG2lxg==
+  resolved "http://localhost:4873/@obsidians%2falgorand-keypair/-/algorand-keypair-0.1.0.tgz#f33c47b65f22f6bb7c57ebbca4faafbf153943f2"
+  integrity sha512-fumX1XgYs38Ea/Gq6XtRd5oo5lAScFNcDX3jA+Sr7zL9Yxk07kYHDJqabKhZye4LLhLrrfzghpJh1DNIdShrYw==
   dependencies:
     "@obsidians/ipc" "^0.1.1"
     "@obsidians/pty" "^0.9.1"
@@ -1466,8 +1465,8 @@
 
 "@obsidians/algorand-node@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-node/-/algorand-node-0.1.0.tgz#8c7f7e8fc74b40a0ca76d1470beb96ede1e5f622"
-  integrity sha512-+ltIarAfztKSxWy+m1By7DTxhXmmP4jT7h1Zty41XCsk+O8u0eyKI1qrxApwHYBwo5rzqpTqEjB0ZqN7fqydkw==
+  resolved "http://localhost:4873/@obsidians%2falgorand-node/-/algorand-node-0.1.0.tgz#24992fabc33d6b35b21a73b91b007377dc44e603"
+  integrity sha512-HwuRgO9mL6MeFb9/8Uw1hrMJc4XMpe8NNyZC0RZ6X0RbuhZM5AEMrqvmf2svbZNYF780DWJzDs/Jsy7T4cq+Ow==
   dependencies:
     "@obsidians/algorand-sdk" "^0.1.0"
     "@obsidians/ipc" "^0.1.1"
@@ -1476,15 +1475,16 @@
 
 "@obsidians/algorand-project@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-project/-/algorand-project-0.1.0.tgz#35459a6a9db12a593a78c62f6fbef8dd5a5eff31"
-  integrity sha512-QQ5Ez0MmJ8e/1X75Lm96NhGT42TbouI18/hIw5Cn3hAefTfDKUoX1QCYBgRr5W8HbWv0rfc9tRUh66A+fZN5zA==
+  resolved "http://localhost:4873/@obsidians%2falgorand-project/-/algorand-project-0.1.0.tgz#46760aedf1f7e3217401bb039df8144383d16c78"
+  integrity sha512-U64c67oZBgY0yImoV8De/urkkT1bxaT/UHnK5zYBLnsl1tsI5eC6GKrZM44Jqa+HMLYUSwnLz98E0rRaitunoA==
   dependencies:
     "@obsidians/algorand-compiler" "^0.1.0"
-    "@obsidians/algorand-keypair" "^0.1.0"
     "@obsidians/algorand-node" "^0.1.0"
+    "@obsidians/algorand-sdk" "^0.1.0"
     "@obsidians/code-editor" "^0.1.0"
     "@obsidians/file-ops" "^0.1.0"
     "@obsidians/ipc" "^0.1.1"
+    "@obsidians/keypair" "^0.1.0"
     "@obsidians/notification" "^0.1.0"
     "@obsidians/ui-components" "^0.1.0"
     "@obsidians/workspace" "^0.1.1"
@@ -1492,16 +1492,17 @@
 
 "@obsidians/algorand-sdk@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-sdk/-/algorand-sdk-0.1.0.tgz#68e1b727ad74c7885acd601f02c8e9b4ddee4f88"
-  integrity sha512-nBhoegeiQ9QcVAi4NPZjRQbVMV/lDA2qa+eVziooCoAw3GaGHV4FjDKCqBsPbn4bjPQuy0eXNSU6uA0kCA54Mg==
+  resolved "http://localhost:4873/@obsidians%2falgorand-sdk/-/algorand-sdk-0.1.0.tgz#222042c3b4b4661730d3c5dfa11d3a99e8120dda"
+  integrity sha512-SzTPGxFgFYAO1E15TJEqZt7y4z5p/il9hrfOrylHGu/9raf4j0sARkRxBJgqZdMQ2xwrbmdiRXA1S1vwXmFnKA==
   dependencies:
+    "@obsidians/keypair" "^0.1.0"
     algosdk "^1.6.1"
     url-parse "^1.4.7"
 
 "@obsidians/algorand-welcome@^0.1.0":
   version "0.1.0"
-  resolved "http://localhost:4873/@obsidians%2falgorand-welcome/-/algorand-welcome-0.1.0.tgz#740390fadc671e6f72ec42808feb762e30cba53b"
-  integrity sha512-z5SSfK8XT6MB/kpAa2diXE7WMBFvaVeMxnhoK8Zb8ofswe1MK67wKtD6T228CcFm9yv3O8e7i7oyjTgwo1WoeQ==
+  resolved "http://localhost:4873/@obsidians%2falgorand-welcome/-/algorand-welcome-0.1.0.tgz#3ccfbf154721abbb84cb2632fc1f5d2972c6c924"
+  integrity sha512-3o69i/0GFK8e8yhhU7hZMA0nWBoOSgiGCaTQb+AyAjBj7vkb2NbjJhL5D+kTr6wcT+uooEHbyhqj29ie7OFd6Q==
   dependencies:
     "@obsidians/algorand-compiler" "^0.1.0"
     "@obsidians/algorand-instances" "^0.1.0"
@@ -1547,12 +1548,22 @@
     react-treebeard "^3.2.4"
     velocity-react "^1.4.3"
 
-"@obsidians/ipc@^0.1.0", "@obsidians/ipc@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@obsidians/ipc/-/ipc-0.1.1.tgz#7f7d489c8742ce0e986c84865dbcbc65da846210"
-  integrity sha512-R4kVp4Gu8+Go3+uJ1RbB9QCTXzresT+XLQMRbrM1Ziv++T7agwyFGlEWHPyaLajHNwZyKNeaI3vdLQJwtqWeUQ==
+"@obsidians/ipc@^0.1.0", "@obsidians/ipc@^0.1.1", "@obsidians/ipc@^0.1.2":
+  version "0.1.2"
+  resolved "http://localhost:4873/@obsidians%2fipc/-/ipc-0.1.2.tgz#e4297edf0cadb6c22e575efee3b70b4ceda36c79"
+  integrity sha512-wE5DhYXKJ451ecRB1H7cG5+wZeD+Iowlbd2pHKa7HhpN0oKyGxiJEjUKISt4DR0CGvwkmBBG0tOVvqXUSqJJoA==
   dependencies:
     "@obsidians/pty" "^0.9.1"
+
+"@obsidians/keypair@^0.1.0":
+  version "0.1.0"
+  resolved "http://localhost:4873/@obsidians%2fkeypair/-/keypair-0.1.0.tgz#454aafd81ba5499465a94ded511105c12911217c"
+  integrity sha512-BYDykTiE7hhZRnuN5JaQyWOpZvLvPCOXjOp0ctgqe/dTXIuk15N36S5hrMFdMl6KeKDxwqKsMdinH0TwMVZWWw==
+  dependencies:
+    "@obsidians/ipc" "^0.1.2"
+    "@obsidians/pty" "^0.9.1"
+    "@obsidians/ui-components" "^0.1.0"
+    keytar "^5.6.0"
 
 "@obsidians/navbar@^0.1.0":
   version "0.1.0"

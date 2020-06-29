@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 
 import { Screen, Button } from '@obsidians/ui-components'
-import AlgorandAccount from '@obsidians/algorand-account'
+import Explorer from '@obsidians/explorer'
 
 import { withRouter } from 'react-router-dom'
 
 import { connect, dispatch } from '@/redux'
 
 
-class Explorer extends Component {
+class ExplorerWithProps extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -98,7 +98,7 @@ class Explorer extends Component {
     }
 
     return (
-      <AlgorandAccount
+      <Explorer
         ref={this.page}
         network={network}
         address={this.getSelected()}
@@ -117,4 +117,4 @@ export default connect([
   'uiState',
   'network',
   'accounts',
-])(withRouter(Explorer))
+])(withRouter(ExplorerWithProps))

@@ -1,16 +1,16 @@
 const { IpcChannel } = require('@obsidians/ipc')
 const { AutoUpdate } = require('@obsidians/algorand-welcome')
-const AlgorandCompilerManager = require('@obsidians/algorand-compiler')
-const { AlgorandInstanceManager } = require('@obsidians/algorand-instances')
-const AlgorandKeypairManager = require('@obsidians/algorand-keypair')
-const AlgorandProjectChannel = require('@obsidians/algorand-project')
+const CompilerManager = require('@obsidians/algorand-compiler')
+const { InstanceManager } = require('@obsidians/algorand-instances')
+const KeypairManager = require('@obsidians/algorand-keypair')
+const ProjectChannel = require('@obsidians/algorand-project')
 
-let ipcChannel, autoUpdate, algorandCompilerManager, algorandInstanceManager, algorandKeypairManager, algorandProjectChannel
+let ipcChannel, autoUpdate, compilerManager, instanceManager, keypairManager, projectChannel
 module.exports = function () {
   ipcChannel = new IpcChannel()
   autoUpdate = new AutoUpdate('https://app.eosstudio.io/api/v1/check-update-algorand/')
-  algorandCompilerManager = new AlgorandCompilerManager()
-  algorandInstanceManager = new AlgorandInstanceManager()
-  algorandKeypairManager = new AlgorandKeypairManager()
-  algorandProjectChannel = new AlgorandProjectChannel()
+  compilerManager = new CompilerManager()
+  instanceManager = new InstanceManager()
+  keypairManager = new KeypairManager()
+  projectChannel = new ProjectChannel()
 }

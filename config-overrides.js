@@ -41,12 +41,13 @@ function addWasmLoader (options) {
 const overrides = [
   addWebpackAlias({
     '@': path.resolve(__dirname, 'src/lib'),
-    '@obsidians/welcome': `@obsidians/${process.env.BUILD}-welcome`,
-    '@obsidians/header': `@obsidians/${process.env.BUILD}-header`,
-    '@obsidians/project': `@obsidians/${process.env.BUILD}-project`,
-    '@obsidians/instances': `@obsidians/${process.env.BUILD}-instances`,
     '@obsidians/bottombar': `@obsidians/${process.env.BUILD}-bottombar`,
-    '@obsidians/keypair': `@obsidians/${process.env.BUILD}-keypair`,
+    '@obsidians/explorer': `@obsidians/${process.env.BUILD}-explorer`,
+    '@obsidians/header': `@obsidians/${process.env.BUILD}-header`,
+    '@obsidians/instances': `@obsidians/${process.env.BUILD}-instances`,
+    '@obsidians/project': `@obsidians/${process.env.BUILD}-project`,
+    '@obsidians/sdk': `@obsidians/${process.env.BUILD}-sdk`,
+    '@obsidians/welcome': `@obsidians/${process.env.BUILD}-welcome`,
   }),
   overrideProcessEnv({
     BUILD: JSON.stringify(process.env.BUILD),

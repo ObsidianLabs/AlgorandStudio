@@ -2,30 +2,9 @@ import React, { PureComponent } from 'react'
 
 import { connect, store, dispatch } from '@/redux'
 
-import headerActions, { Header, NavGuard } from '@obsidians/header'
+import headerActions, { networks, Header, NavGuard } from '@obsidians/header'
 import keypairManager from '@obsidians/keypair'
 import { actions } from '@obsidians/project'
-
-import { List } from 'immutable'
-
-const networks = List([
-  // {
-  //   id: 'local',
-  //   group: 'default',
-  //   name: 'Local',
-  //   fullName: 'Local Dev Network',
-  //   icon: 'fas fa-laptop-code',
-  //   notification: 'Switched to <b>Local Dev</b> network.',
-  // },
-  {
-    id: 'testnet',
-    group: 'default',
-    name: 'Testnet',
-    fullName: 'Testnet Network',
-    icon: 'fas fa-laptop-code',
-    notification: 'Switched to <b>Testnet</b> network.',
-  }
-])
 
 
 class HeaderWithRedux extends PureComponent {

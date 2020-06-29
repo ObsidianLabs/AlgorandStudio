@@ -55,9 +55,6 @@ export const contracts = {
   }),
   persist: true,
   actions: {
-    CREATE_LOCAL: {
-      reducer: state => state.update('local', (local = Immutable.fromJS({ selected: '', data: [] })) => local)
-    },
     CREATE_TABS: {
       reducer: state => state
         .updateIn(['local', 'tabs'], (tabs = List([])) => tabs)
