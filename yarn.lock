@@ -9583,6 +9583,11 @@ moment@^2.24.0:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
+monaco-ace-tokenizer@^0.2.0:
+  version "0.2.0"
+  resolved "http://localhost:4873/monaco-ace-tokenizer/-/monaco-ace-tokenizer-0.2.0.tgz#67bd9ebf26c3a2828ab2f7b2579291f67ef13fc4"
+  integrity sha512-kKOcp6Ty0QNoc73IXBBmfxgd985O3WtKYB3255GWwSoMiETz0R58TICaZhZdSk5RfG31kBJfPYNUrYIsdcw0cg==
+
 monaco-editor-webpack-plugin@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/monaco-editor-webpack-plugin/-/monaco-editor-webpack-plugin-1.9.0.tgz#5b547281b9f404057dc5d8c5722390df9ac90be6"
