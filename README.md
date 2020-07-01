@@ -47,10 +47,27 @@ After a project is created, Algorand Studio will automatically navigate to the p
 Click the `Build` button (with the hammer icon) in the project toolbar (above the file tree) to compile the Algorand smart contract. If this is a pure TEAL project, it only requires the Algorand node docker image to compile TEAL scripts to binaries. If this is a PyTeal project, it also requires the PyTeal docker image to compile PyTeal to TEAL in advance.
 
 <p align="center">
-  <img src="./screenshots/main.png" width="720px">
+  <img src="./screenshots/compile.png" width="720px">
 </p>
 
 The terminal below will display logs and errors from the compiler. If the smart contract is compiled successfully, the terminal will print the [contract address](https://developer.algorand.org/docs/features/asc1/goal_teal_walkthrough/#simple-teal-example) and save it to the file `./contract.addr` for later use.
+
+### Support for TEAL Language
+
+Algorand Studio provides syntax highlighting, autocomplete and opcode definition for [TEAL Language](https://developer.algorand.org/docs/reference/teal/specification/). With these features, you can read and write TEAL language easily with Algorand Studio.
+
+A dropdown list will open when you are typing TEAL opcode, it helps you to autocomplete the TEAL opcode and gives you syntax highlighting.
+
+<p align="center">
+  <img src="./screenshots/autocomplete.png" width="480px">
+</p>
+
+You can also view TEAL opcode definitions by hovering your mouse over it.
+
+<p align="center">
+  <img src="./screenshots/definition.png" width="480px">
+</p>
+
 
 ### Start an Algorand Node
 
