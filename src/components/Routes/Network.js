@@ -5,13 +5,13 @@ import { InstanceList } from '@obsidians/instances'
 
 import { withRouter } from 'react-router-dom'
 
-const onLifecycle = ({ lifecycle, runningInstance, algoNode }) => {
+const onLifecycle = ({ lifecycle, runningInstance, params }) => {
   switch (lifecycle) {
     case 'stopped':
       redux.dispatch('UPDATE_UI_STATE', { localNetwork: '', algoNode: '' })
       break
     case 'started':
-      redux.dispatch('UPDATE_UI_STATE', { localNetwork: runningInstance, algoNode })
+      redux.dispatch('UPDATE_UI_STATE', { localNetwork: runningInstance, algoNode: params })
       break
     default:
   }
