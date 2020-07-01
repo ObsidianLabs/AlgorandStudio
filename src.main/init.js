@@ -5,7 +5,7 @@ const CompilerManager = require('@obsidians/algorand-compiler')
 const { InstanceManager } = require('@obsidians/algorand-instances')
 const ProjectChannel = require('@obsidians/algorand-project')
 
-let ipcChannel, autoUpdate, compilerManager, instanceManager, keypairManager, projectChannel
+let ipcChannel, keypairManager, autoUpdate, compilerManager, instanceManager, projectChannel
 module.exports = function () {
   ipcChannel = new IpcChannel()
   keypairManager = new KeypairManager(process.env.BUILD)
