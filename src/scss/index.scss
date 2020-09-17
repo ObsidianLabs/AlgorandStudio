@@ -132,6 +132,8 @@ $link-hover-color: $link-color;
 @import "bootstrap/scss/bootstrap.scss";
 
 @import "button";
+@import "dropdown";
+@import "modal";
 @import "hljs";
 
 @each $color, $value in $theme-colors {
@@ -153,8 +155,9 @@ $link-hover-color: $link-color;
   --color-bg: #{$background} !important;
   --color-bg2: var(--dark) !important;
   --color-bg-invalid: #{$dark2} !important;
-  --color-hover: #{$secondary} !important;
-
+  --color-hover: #{$gray-600} !important;
+  --color-placeholder: #{$gray-600} !important;
+  
   --color-primary: #{$primary} !important;
   --color-secondary: #{$secondary} !important;
   --color-success: #{$success} !important;
@@ -306,26 +309,6 @@ textarea {
   word-break: break-all;
 }
 
-.dropdown-menu {
-  max-height: 398px;
-  overflow: auto;
-  background: $background2;
-  &::-webkit-scrollbar-thumb {
-    border: 4px solid $background2 !important;
-  }
-}
-
-.dropdown-header {
-  font-variant: small-caps;
-  text-transform: uppercase;
-  font-size: $font-size-xs;
-  font-weight: bold;
-}
-
-.dropdown-divider {
-  margin: 0.25rem 0
-}
-
 .jumbotron {
   flex: 1;
   margin: 0;
@@ -418,29 +401,6 @@ textarea {
 .card-body {
   padding: .75rem 1rem;
 }
-
-.dropdown-header, .dropdown-item {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.modal-dialog {
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.modal-fullscreen.modal-dialog {
-  width: 100%;
-  max-width: 100%;
-  padding: 1.75rem;
-}
-.modal-content {
-  max-height: 100% !important;
-}
-.modal-header { flex-shrink: 0 }
-.modal-footer { flex-shrink: 0 }
 
 .account-page {
   flex: 1;
