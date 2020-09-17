@@ -1,0 +1,24 @@
+.dropdown-menu {
+  max-height: 398px;
+  overflow: auto;
+  background: $background2;
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid $background2 !important;
+  }
+}
+
+.dropdown-header {
+  font-variant: small-caps;
+  text-transform: uppercase;
+  font-size: $font-size-xs;
+  font-weight: bold;
+}
+
+.dropdown-divider {
+  margin: 0.25rem 0
+}
+
+.dropdown-header, .dropdown-item {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}

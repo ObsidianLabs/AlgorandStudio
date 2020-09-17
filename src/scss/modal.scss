@@ -1,0 +1,17 @@
+.modal-dialog {
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.modal-fullscreen.modal-dialog {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.75rem;
+}
+.modal-content {
+  max-height: 100% !important;
+}
+.modal-header { flex-shrink: 0 }
+.modal-footer { flex-shrink: 0 }
