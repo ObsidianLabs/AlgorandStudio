@@ -34,7 +34,7 @@ class HeaderWithRedux extends PureComponent {
 
   render () {
     console.debug('[render] HeaderWithRedux')
-    const { projects, contracts, accounts, network } = this.props
+    const { profile, projects, contracts, accounts, network } = this.props
 
     const selectedProject = projects.get('selected')?.toJS() || {}
 
@@ -48,6 +48,7 @@ class HeaderWithRedux extends PureComponent {
 
     return (
       <Header
+        profile={profile}
         projects={projects.get('local').toJS()}
         selectedProject={selectedProject}
         selectedContract={selectedContract}
@@ -61,6 +62,7 @@ class HeaderWithRedux extends PureComponent {
 }
 
 export default connect([
+  'profile',
   'projects',
   'contracts',
   'accounts',
