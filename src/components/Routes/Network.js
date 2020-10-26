@@ -1,23 +1,11 @@
 import React, { PureComponent } from 'react'
 
-import redux, { connect } from '@obsidians/redux'
-import { InstanceList } from '@obsidians/instances'
+import { connect } from '@obsidians/redux'
+import Network from '@obsidians/network'
 
 import { withRouter } from 'react-router-dom'
 
-const onLifecycle = ({ lifecycle, runningInstance, params }) => {
-  switch (lifecycle) {
-    case 'stopped':
-      redux.dispatch('UPDATE_UI_STATE', { localNetwork: '', algoNode: '' })
-      break
-    case 'started':
-      redux.dispatch('UPDATE_UI_STATE', { localNetwork: runningInstance, algoNode: params })
-      break
-    default:
-  }
-}
-
-class Network extends PureComponent {
+class NetworkWithProps extends PureComponent {
   state = {
     active: true
   }
@@ -29,16 +17,14 @@ class Network extends PureComponent {
 
   render () {
     return (
-      <InstanceList
+      <Network
         network={this.props.network}
-        onLifecycle={onLifecycle}
         active={this.state.active}
       />
     )
   }
 }
 
-
 export default connect([
   'network',
-])(withRouter(Network))
+])(withRouter(NetworkWithProps))

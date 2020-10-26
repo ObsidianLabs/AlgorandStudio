@@ -2,7 +2,7 @@ const { IpcChannel } = require('@obsidians/ipc')
 const KeypairManager = require('@obsidians/keypair')
 const { AutoUpdate } = require('@obsidians/global')
 const CompilerManager = require('@obsidians/algorand-compiler')
-const { InstanceManager } = require('@obsidians/algorand-instances')
+const { InstanceManager } = require('@obsidians/algorand-network')
 const ProjectChannel = require('@obsidians/algorand-project')
 
 let ipcChannel, keypairManager, autoUpdate, compilerManager, instanceManager, projectChannel
