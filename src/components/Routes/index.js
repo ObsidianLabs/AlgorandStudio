@@ -29,7 +29,7 @@ export default function (props) {
           <Route
             exact
             path='/'
-            render={() => <Redirect to='/local' />}
+            render={() => <Redirect to={`/${Auth.username || 'local'}`} />}
           />
           <CacheRoute
             exact
