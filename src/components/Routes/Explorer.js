@@ -82,7 +82,7 @@ class ExplorerWithProps extends Component {
   render () {
     const { network, uiState } = this.props
 
-    if (!uiState.get('algoNode')) {
+    if (network === 'testnet' && !uiState.get('algoNode')) {
       return (
         <Screen>
           <h4 className='display-4'>Disconnected</h4>
