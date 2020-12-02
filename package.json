@@ -1,7 +1,7 @@
 {
   "name": "algorand-studio",
   "description": "Graphic IDE for Algorand smart contract development",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Algorand Studio",
     "email": "phil.li@obsidians.io",
