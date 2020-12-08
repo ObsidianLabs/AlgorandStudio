@@ -82,7 +82,7 @@ jobs:
       - name: Checkout Studio
         uses: actions/checkout@v2
         with:
-          ref: develop
+          ref: master
           path: ./studio
 
       - name: Build studio
