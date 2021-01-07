@@ -11,7 +11,7 @@ env:
   owner: ObsidianLabs
   own_components: algorand-components
   share_components: electron-components
-  project_build: calgorand
+  project_build: algorand
   project_name: Algorand Studio
   project_build_script: yarn && PUBLIC_URL=/ CDN=true yarn build:react
 
