@@ -16,6 +16,16 @@ Installation packages are provided in [releases](https://github.com/ObsidianLabs
 - **Linux** Right-click `AlgorandStudio-x.x.x.AppImage`, select `Properties` => `Permissions` => `Execute`, and check the option `Allow executing file as progrom`. Close the property window and double-click the application to open it.
 (Different Linux systems may have slightly different installation procedures)
 
+### Post-installation steps for Linux
+
+Algorand Studio uses `inotify` by default on Linux to monitor directories for changes. You will need to increase the amount of inotify watchers to ensure the filetree is refreshed properly.
+
+To increase inotify watchers at boot, execute the following command in Terminal:
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 ## Feature Walkthrough
 
 ### Prerequisites
