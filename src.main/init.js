@@ -4,6 +4,7 @@ const { AutoUpdate } = require('@obsidians/global')
 const CompilerManager = require('@obsidians/algorand-compiler')
 const { InstanceManager } = require('@obsidians/algorand-network')
 const ProjectChannel = require('@obsidians/algorand-project')
+const AuthChannel = require('@obsidians/auth')
 
 let ipcChannel, keypairManager, autoUpdate, compilerManager, instanceManager, projectChannel
 module.exports = function () {
@@ -13,4 +14,5 @@ module.exports = function () {
   compilerManager = new CompilerManager()
   instanceManager = new InstanceManager()
   projectChannel = new ProjectChannel()
+  authChannel = new AuthChannel()
 }
