@@ -3129,16 +3129,6 @@ babel-loader@8.1.0:
     pify "^4.0.1"
     schema-utils "^2.6.5"
 
-babel-loader@^8.0.6:
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.2.tgz#9363ce84c10c9a40e6c753748e1441b60c8a0b81"
-  integrity sha512-JvTd0/D889PQBtUXJ2PXaKU/pjZDMtHA9V2ecm+eNRmmBCMR09a+fmpGTNwnJtFmFl5Ei7Vy47LjBb+L0wQ99g==
-  dependencies:
-    find-cache-dir "^3.3.1"
-    loader-utils "^1.4.0"
-    make-dir "^3.1.0"
-    schema-utils "^2.6.5"
-
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
