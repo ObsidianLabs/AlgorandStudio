@@ -3,14 +3,15 @@ import React, { PureComponent } from 'react'
 import { connect } from '@obsidians/redux'
 import { IpcChannel } from '@obsidians/ipc'
 
-import headerActions, { Header, NavGuard } from '@obsidians/header'
+import headerActions, { Header, NavGuard, AuthModal } from '@obsidians/header'
 import { networkManager, networks } from '@obsidians/network'
 import { actions } from '@obsidians/workspace'
 
 import { List } from 'immutable'
 class HeaderWithRedux extends PureComponent {
   state = {
-    networkList: List()
+    networkList: List(),
+    interval: null
   }
 
   componentDidMount () {
@@ -28,30 +29,37 @@ class HeaderWithRedux extends PureComponent {
 
   async refresh () {
     if (process.env.DEPLOY === 'bsn') {
-      try {
-        const ipc = new IpcChannel('bsn')
-        const projects = await ipc.invoke('projects', { chain: 'algo' })
-        this.setState({
-          networkList: List(projects.map(project => {
-            const url = project.endpoints?.find(endpoint => endpoint.startsWith('http'))
-            return {
-              id: `bsn${project.network.id}`,
-              group: 'BSN',
-              name: `${project.network.name}`,
-              fullName: `${project.network.name} - ${project.name}`,
-              icon: 'fas fa-globe',
-              notification: `Switched to <b>${project.name}</b>.`,
-              url,
-            }
-          }))
-        }, this.setNetwork)
-      } catch (error) {
-        console.log(error)
-      }
+      this.getNetworks()
+      clearInterval(this.state.interval)
+      const interval = setInterval(() => this.getNetworks(), 30 * 1000)
+      this.setState({ interval })
     } else {
       this.setState({
         networkList: List(networks)
       }, this.setNetwork)
+    }
+  }
+
+  async getNetworks () {
+    try {
+      const ipc = new IpcChannel('bsn')
+      const projects = await ipc.invoke('projects', { chain: 'algo' })
+      this.setState({
+        networkList: List(projects.map(project => {
+          const url = project.endpoints?.find(endpoint => endpoint.startsWith('http'))
+          return {
+            id: `bsn${project.network.id}`,
+            group: 'BSN',
+            name: `${project.network.name}`,
+            fullName: `${project.network.name} - ${project.name}`,
+            icon: 'fas fa-globe',
+            notification: `Switched to <b>${project.network.name}</b>.`,
+            url,
+          }
+        }))
+      }, this.setNetwork)
+    } catch (error) {
+      this.setState({ networkList: List() })
     }
   }
 
@@ -102,6 +110,7 @@ class HeaderWithRedux extends PureComponent {
         starred={starred}
         network={selectedNetwork}
         networkList={networkList}
+        AuthModal={AuthModal}
       />
     )
   }
