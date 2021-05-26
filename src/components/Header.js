@@ -12,7 +12,6 @@ import { createProject } from '../lib/bsn'
 import { List } from 'immutable'
 class HeaderWithRedux extends PureComponent {
   state = {
-    networkList: List(),
     interval: null
   }
 
@@ -36,9 +35,8 @@ class HeaderWithRedux extends PureComponent {
       const interval = setInterval(() => this.getNetworks(), 30 * 1000)
       this.setState({ interval })
     } else {
-      this.setState({
-        networkList: List(networks)
-      }, this.setNetwork)
+      networkManager.networks = networks
+      this.setNetwork({ notify: true })
     }
   }
 
@@ -46,31 +44,28 @@ class HeaderWithRedux extends PureComponent {
     try {
       const ipc = new IpcChannel('bsn')
       const projects = await ipc.invoke('projects', { chain: 'algo' })
-      this.setState({
-        networkList: List(projects.map(project => {
-          const url = project.endpoints?.find(endpoint => endpoint.startsWith('http'))
-          return {
-            id: `bsn${project.network.id}`,
-            group: 'BSN',
-            name: `${project.network.name}`,
-            fullName: `${project.network.name} - ${project.name}`,
-            icon: 'fas fa-globe',
-            notification: `Switched to <b>${project.network.name}</b>.`,
-            url,
-            raw: project,
-          }
-        }))
-      }, () => {
-        this.setNetwork(false)
+      networkManager.networks = projects.map(project => {
+        const url = project.endpoints?.find(endpoint => endpoint.startsWith('http'))
+        return {
+          id: `bsn${project.network.id}`,
+          group: 'BSN',
+          name: `${project.network.name}`,
+          fullName: `${project.network.name} - ${project.name}`,
+          icon: 'fas fa-globe',
+          notification: `Switched to <b>${project.network.name}</b>.`,
+          url,
+          raw: project,
+        }
       })
+      this.setNetwork({ redirect: false, notify: false })
     } catch (error) {
-      this.setState({ networkList: List() })
+      networkManager.networks = []
     }
   }
 
-  setNetwork (redirect = true) {
-    if (!networkManager.network) {
-      networkManager.setNetwork(this.state.networkList.get(0), redirect)
+  setNetwork (options) {
+    if (!networkManager.network && networkManager.networks.length) {
+      networkManager.setNetwork(networkManager.networks[0], options)
     }
   }
 
@@ -108,9 +103,10 @@ class HeaderWithRedux extends PureComponent {
 
     const selectedProject = projects.get('selected')?.toJS() || {}
 
-    const networkGroups = this.state.networkList.groupBy(n => n.group)
+    const list = List(networkManager.networks)
+    const networkGroups = list.groupBy(n => n.group)
     const networkList = this.networkList(networkGroups)
-    const selectedNetwork = this.state.networkList.find(n => n.id === network) || {}
+    const selectedNetwork = list.find(n => n.id === network) || {}
 
     const starred = accounts.getIn([network, 'accounts'])?.toJS() || []
     const selectedContract = contracts.getIn([network, 'selected']) || ''
