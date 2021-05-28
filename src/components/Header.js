@@ -49,8 +49,8 @@ class HeaderWithRedux extends PureComponent {
         return {
           id: `${project.name}${project.network.id}`,
           group: 'BSN',
-          // name: `${project.network.name}/${project.name}`,
-          name: `${project.network.name}`,
+          name: `${project.network.name}/${project.name}`,
+          // name: `${project.network.name}`,
           fullName: `${project.network.name} - ${project.name}`,
           icon: 'fas fa-globe',
           notification: `Switched to <b>${project.name}</b>.`,
