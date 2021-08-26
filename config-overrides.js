@@ -54,6 +54,8 @@ const overrides = [
     BUILD: JSON.stringify(process.env.BUILD),
     PROJECT: JSON.stringify(process.env.PROJECT || process.env.BUILD),
     PROJECT_NAME: JSON.stringify(process.env.PROJECT_NAME),
+    DEPLOY: JSON.stringify(process.env.DEPLOY),
+    LOGIN_PROVIDERS: JSON.stringify(process.env.LOGIN_PROVIDERS),
     OS_IS_LINUX: JSON.stringify(os.type() === 'Linux'),
     OS_IS_WINDOWS: JSON.stringify(os.type() === 'Windows_NT'),
     OS_IS_MAC: JSON.stringify(os.type() === 'Darwin'),
