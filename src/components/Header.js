@@ -59,6 +59,7 @@ class HeaderWithRedux extends PureComponent {
           icon: 'fas fa-globe',
           notification: `Switched to <b>${project.name}</b>.`,
           url,
+          projectKey: project.key,
           raw: project,
         }
       })
